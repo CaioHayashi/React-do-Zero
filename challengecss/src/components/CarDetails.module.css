@@ -1,18 +1,7 @@
-.container{
-    background-color: blue;
-    padding: 10px;
-    margin: 25px;
-    width: 800px;
-    height: 300px;
-    border-radius: 10px;
-}
-
-.img {
-    width: 50%;
-}
-
 .content {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+}
+
+.my_img {
+    width: 30vw;
 }

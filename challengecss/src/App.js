@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Comparativos Sedãs</h1>
+      <h1 className='Title'>Comparativo Models Tesla</h1> 
       {cars.map( (car, i) => ( 
         <CarDetails 
           key={i}
