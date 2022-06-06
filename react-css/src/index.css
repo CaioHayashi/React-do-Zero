@@ -2,4 +2,17 @@ body {
   margin: 0%;
   padding: 0%;
   padding-bottom: 500px;
+  font-family: 'Helvetica';
+}
+
+.redTitle {
+  background-color: black;
+  color: red;
+  padding: 25px;
+  border: 5px solid red;
+}
+
+.title {
+  background-color: black;
+  color: white; 
 }
