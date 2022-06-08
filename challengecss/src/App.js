@@ -29,17 +29,19 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className='Title'>Comparativo Models Tesla</h1> 
-      {cars.map( (car, i) => ( 
-        <CarDetails 
-          key={i}
-          name={car.name}
-          age={car.age}
-          price={car.price}
-          settings={car.settings}
-          img={car.img}
+      <h1 className="Title">Comparativo Models Tesla</h1>
+      <div className="car_container">
+        {cars.map((car, i) => (
+          <CarDetails
+            key={i}
+            name={car.name}
+            age={car.age}
+            price={car.price}
+            settings={car.settings}
+            img={car.img}
           />
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
