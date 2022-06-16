@@ -40,6 +40,7 @@ const MyForm = ({ user }) => {
             onChange={handleName}
             value={name}
           />
+            
         </div>
         <div>
           <label>
