@@ -2,6 +2,9 @@ import "./App.css";
 
 import { useState, useEffect } from "react";
 
+// 4 - custom hook
+import { useFetch } from "./hooks/useFetch";
+
 function App() {
 	const [products, setProducts] = useState([]);
 
@@ -10,16 +13,19 @@ function App() {
 
 	const url = "http://localhost:3000/products";
 
-	// 1 - resgatando dados
-	useEffect(() => {
-		async function fetchData() {
-			const res = await fetch(url);
-			const data = await res.json();
+	// 4 - custom
+	const { data: items } = useFetch(url);
 
-			setProducts(data);
-		}
-		fetchData();
-	}, []);
+	// 1 - resgatando dados
+	// useEffect(() => {
+	// 	async function fetchData() {
+	// 		const res = await fetch(url);
+	// 		const data = await res.json();
+
+	// 		setProducts(data);
+	// 	}
+	// 	fetchData();
+	// }, []);
 
 	// 2 - adicionando dados
 	const handleSubmit = async (e) => {
@@ -37,17 +43,23 @@ function App() {
 			},
 			body: JSON.stringify(product)
 		});
+
+		// 3 - carregamento dinâmico
+		const addedProduct = await res.json();
+
+		setProducts((prevProducts) => [...prevProducts, addedProduct]);
 	};
 
 	return (
 		<div className="App">
 			<h2>Lista de Produtos</h2>
 			<ul>
-				{products.map((product) => (
-					<li key={product.id}>
-						{product.name} - R$ {product.price}
-					</li>
-				))}
+				{items &&
+					items.map((product) => (
+						<li key={product.id}>
+							{product.name} - R$ {product.price}
+						</li>
+					))}
 			</ul>
 
 			<div className="add-product">
