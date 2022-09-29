@@ -21,28 +21,28 @@
       "id": 4
     },
     {
-      "name": "Calça Azul (test)",
-      "price": "100.00",
-      "id": 5
-    },
-    {
-      "name": "Calça Verde (test)",
-      "price": "150",
-      "id": 6
-    },
-    {
       "name": "Teclado",
-      "price": "110",
-      "id": 7
-    },
-    {
-      "name": "Blusa",
-      "price": "222",
-      "id": 8
+      "price": "150",
+      "id": 5
     },
     {
       "name": "Mouse",
       "price": "100",
+      "id": 6
+    },
+    {
+      "name": "Suporte Monitor",
+      "price": "350",
+      "id": 7
+    },
+    {
+      "name": "Cabo HDMI",
+      "price": "20",
+      "id": 8
+    },
+    {
+      "name": "Mousepad",
+      "price": "80",
       "id": 9
     }
   ]
